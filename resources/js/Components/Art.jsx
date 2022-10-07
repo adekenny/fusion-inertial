@@ -6,7 +6,7 @@ export default function Art({art}){
         <div>
           <h1 className="pt-6 px-10 text-xl text-purple-900 font-bold">Browse artworks and artifacts for your interior</h1>
         </div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-6 py-6 px-10">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-6 py-4 px-10">
           {art.map(item=>(
     
     <div className="overflow-hidden shadow-md flex flex-col rounded-lg border-gray-400 mb-3  bg-slate-200">
@@ -21,5 +21,10 @@ export default function Art({art}){
           ))}
      
         </div>
+        <div className="flex flex-row-reverse px-10 mt-0">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 rounded-full w-full sm:w-full md:w-60 lg:w-60">
+      see all categories
+      </button>
+    </div>
         </>)
 }

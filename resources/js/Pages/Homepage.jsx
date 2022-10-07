@@ -11,7 +11,7 @@ import Videos from '@/Components/Videos';
 
 
 const nav = [
-  { name: 'Home', href: '#', current: true },
+  { name: 'Home', href: '#', current: true, submenu: false },
   { 
     name: 'Interior Ideas', 
     href: '#', 
@@ -27,11 +27,26 @@ const nav = [
           {"title": "Lightening & Fittings", "href": "#"},
           {"title": "Painter", "href": "#"},
     ]
-
     
    },
-  { name: 'Find Professionals', href: '#', current: false },
-  { name: 'Shop Online', href: '#', current: false },
+  {
+     name: 'Find Professionals',
+     href: "#",
+     current: false,
+     submenu:[
+      {"title": "Screeding & Painting", "href": "#"},
+      {"title": "TV Shelve Installer", "href": "#"},
+      {"title": "Epoxy Floor Coating", "href": "#"},
+      {"title": "Tiler", "href": "#"},
+      {"title": "Furniture Make", "href": "#"},
+      {"title": "POP Ceiling Installation", "href": "#"},
+      {"title": "Window Curtain & Pelmet", "href": "#"},
+      {"title": "Lightening & Fittings", "href": "#"},
+      {"title": "Painter", "href": "#"},
+     ]
+    
+  },
+  { name: 'Shop Online', href: '#', current: false, submenu: false },
 
 ]
 
@@ -412,11 +427,6 @@ export default function Homepage() {
     <Professionals professionals={professionals} />
     <Art art={artworks} />
     <Videos videos={videos} />
- 
-    <div>
-      <h1 className="pt-5 pb-12 px-10 text-xl">Hot Deals</h1>
-    </div>
-
 
     <div>
       <h1 className="pt-5 pb-12 px-10 text-xl">Latest Interior Videos | Interior Make-over | New concepts</h1>
@@ -426,3 +436,5 @@ export default function Homepage() {
  </>
   )
 }
+
+

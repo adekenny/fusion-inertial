@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Home;
 use App\Http\Requests\StoreHomeRequest;
 use App\Http\Requests\UpdateHomeRequest;
+use Inertia\Inertia;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('Homepage');
+    }
+
+
+    public function registration($category){
+
+        return Inertia::render('Auth/Register',['category' => $category ]
+    );
+    
     }
 
     /**

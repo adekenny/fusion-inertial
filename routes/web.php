@@ -1,8 +1,10 @@
 <?php
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
 
 
 /*
@@ -17,7 +19,7 @@ use Inertia\Inertia;
 */
 
 
-
+/*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -26,6 +28,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
 
 Route::get('/greet', [WebsiteController::class, 'page']);
 
@@ -42,15 +45,23 @@ Route::get('/three', function(){
     return Inertia::render('Three');
 });
 
+*/
+
 Route::get('/four', function(){
     return Inertia::render('four');
 });
 
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
+/*
 
-Route::get('/', function(){
-    return Inertia::render('Homepage');
+Route::get('/registration/{category}', [HomeController::class, 'registration'])->name('registration_page');
+
+*/
+
+Route::get('/registration/{category}', function($request){
+    return ($request);
 });
 
 

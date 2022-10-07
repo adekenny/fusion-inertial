@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import GuestLayout from '@/Layouts/GuestLayout';
+import VisitorsLayout from '@/Layouts/VisitorsLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/inertia-react';
+
+
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -31,16 +33,34 @@ export default function Register() {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Register" />
-
+        <VisitorsLayout>
+            <Head title="Sign-Up" />
+           
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel forInput="name" value="Name" />
+                    <InputLabel forInput="firstname" value="Firstname" />
 
                     <TextInput
                         type="text"
-                        name="name"
+                        name="firstname"
+                        value={data.name}
+                        className="mt-1 block w-full"
+                        autoComplete="name"
+                        isFocused={true}
+                        handleChange={onHandleChange}
+                        required
+                        placeholder="Firstname"
+                    />
+
+                    <InputError message={errors.name} className="mt-2" />
+                </div>
+
+                <div className="mt-4"> 
+                    <InputLabel forInput="Surname" value="Surname" />
+
+                    <TextInput
+                        type="text"
+                        name="Surname"
                         value={data.name}
                         className="mt-1 block w-full"
                         autoComplete="name"
@@ -109,6 +129,6 @@ export default function Register() {
                     </PrimaryButton>
                 </div>
             </form>
-        </GuestLayout>
+        </VisitorsLayout>
     );
 }

@@ -5,6 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {useState} from 'react'
 import { TextareaAutosize } from '@mui/base'
+import { Link, Head } from '@inertiajs/inertia-react'
 
 
 function classNames(...classes) {
@@ -61,7 +62,7 @@ export default function Navigation({navigation}){
                         aria-current={item.current ? 'page' : undefined}
                        
                       >
-                          {item.name === "Find Professionals" ?
+                          {item.name === "Interior Ideas" ?
                              <Menu as="div" className="relative inline-block text-left">
                              <div>
                              
@@ -79,61 +80,123 @@ export default function Navigation({navigation}){
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute left-0 z-10 mt-3 w-auto origin-top-right divide-y rounded-md bg-white shadow-lg p-4">
-          <div className="flex row-auto py-1 justify-content-center space-x-10">
-              <div>
+        <Menu.Items className="absolute left-0 z-10 mt-3 w-auto origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg p-2">
+          <div className="flex row-auto space-x-10 w-auto justify-start">
+          <div className="w-3/6">
             <Menu.Item>
-              {({ active }) => (
+            {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-4 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
-                  Edit
+                  Livingroom
                 </a>
               )}
             </Menu.Item>
             </div>
-            <div>
+            <div className="w-3/6">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-4 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
-                  Duplicate
+                  Bedroom 
                 </a>
               )}
             </Menu.Item>
             </div>
-            <div>
+            <div className="w-3/6">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-4 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
-                  Duplication
+                  Kitchen
                 </a>
               )}
             </Menu.Item>
             </div>
-            <div>
+            <div className="w-3/6">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-4 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Bathroom
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+          </div>
+          <div className="flex row-auto justify-start space-x-10">
+          <div className="w-auto">
+            <Menu.Item>
+            {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                 Kids' room
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div className="w-3/6">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                 Home Bar
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div className="w-3/6">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                 Hall 
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div className="w-3/6">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
                   Duplicationational
@@ -142,88 +205,78 @@ export default function Navigation({navigation}){
             </Menu.Item>
             </div>
           </div>
-          <div className="flex row-auto py-1">
-          <div className="mr-10">
+
+          <div className="flex row-auto justify-content-center space-x-10">
+          <div className="w-3/6">
             <Menu.Item>
-              {({ active }) => (
+            {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
-                  Archive
+                  Designer
                 </a>
               )}
             </Menu.Item>
             </div>
-            <div>
+            <div className="w-3/6">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
                   )}
                 >
-                  Move
+                  Duplicate
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div className="w-3/6">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplication
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div className="w-3/6">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicationational
                 </a>
               )}
             </Menu.Item>
             </div>
           </div>
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Share
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Add to favorites
-                </a>
-              )}
-            </Menu.Item>
-          </div>
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Delete
-                </a>
-              )}
-            </Menu.Item>
-          </div>
+          
+       
         </Menu.Items>
       </Transition>
                             </Menu>
 
                             :
 
-                            item.name === "Interior Ideas" ?
+                            item.name === "Find Professionals" ?
 
                             <Menu as="div" className="relative inline-block text-left">
                             <div>
@@ -244,114 +297,131 @@ export default function Navigation({navigation}){
        leaveFrom="transform opacity-100 scale-100"
        leaveTo="transform opacity-0 scale-95"
      >
-       <Menu.Items className="absolute right-0 z-10 mt-3 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-         <div className="flex row-auto py-1">
-             <div className="mr-10">
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Edit
-               </a>
-             )}
-           </Menu.Item>
-           </div>
-           <div>
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Duplicate
-               </a>
-             )}
-           </Menu.Item>
-           </div>
-         </div>
-         <div className="flex row-auto py-1">
-         <div className="mr-10">
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Archive
-               </a>
-             )}
-           </Menu.Item>
-           </div>
-           <div>
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Move
-               </a>
-             )}
-           </Menu.Item>
-           </div>
-         </div>
-         <div className="py-1">
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Share
-               </a>
-             )}
-           </Menu.Item>
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Add to favorites
-               </a>
-             )}
-           </Menu.Item>
-         </div>
-         <div className="py-1">
-           <Menu.Item>
-             {({ active }) => (
-               <a
-                 href="#"
-                 className={classNames(
-                   active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                   'block px-4 py-2 text-sm'
-                 )}
-               >
-                 Delete
-               </a>
-             )}
-           </Menu.Item>
-         </div>
+        <Menu.Items className="absolute left-0 z-10 mt-3 w-auto origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg p-2">
+        <div className="flex row-auto justify-content-center space-x-10">
+            <div>
+            <Menu.Item>
+            {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Designer
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicate
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplication
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicationational
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+          </div>
+          <div className="flex row-auto justify-content-center space-x-10">
+            <div>
+            <Menu.Item>
+            {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Designer
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicate
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplication
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicationational
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+          </div>
        </Menu.Items>
      </Transition>
                            </Menu>
@@ -359,7 +429,158 @@ export default function Navigation({navigation}){
                            
                             :
 
-                            item.name}
+                            item.name === "Shop Online" ?
+
+                            <Menu as="div" className="relative inline-block text-left">
+                            <div>
+                            
+                            <Menu.Button className="inline-flex w-full justify-center   px-4 text-sm font-medium shadow-sm ">
+         {item.name}
+         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+       </Menu.Button>
+                              
+                            
+                            </div>
+                            <Transition
+       as={Fragment}
+       enter="transition ease-out duration-100"
+       enterFrom="transform opacity-0 scale-95"
+       enterTo="transform opacity-100 scale-100"
+       leave="transition ease-in duration-75"
+       leaveFrom="transform opacity-100 scale-100"
+       leaveTo="transform opacity-0 scale-95"
+     >
+        <Menu.Items className="absolute left-0 z-10 mt-3 w-auto origin-top-right divide-y divide-gray-300 rounded-md bg-white shadow-lg p-2">
+        <div className="flex row-auto justify-content-center space-x-10">
+            <div>
+            <Menu.Item>
+            {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Designer
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicate
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplication
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicationational
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+          </div>
+          <div className="flex row-auto justify-content-center space-x-10">
+            <div>
+            <Menu.Item>
+            {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Designer
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicate
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplication
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+            <div>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="#"
+                  className={classNames(
+                    active ? 'bg-white text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm hover:text-blue-800'
+                  )}
+                >
+                  Duplicationational
+                </a>
+              )}
+            </Menu.Item>
+            </div>
+          </div>
+       </Menu.Items>
+     </Transition>
+                           </Menu>
+                           :
+                           item.name
+}
                       </a>
                     ))}
                   </div>
@@ -367,60 +588,13 @@ export default function Navigation({navigation}){
                 
               </div>
               
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div className="text-white text-sm">Sign-In</div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-8 mr-8 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <Link href={route('login')}><div className="text-white text-sm">Sign-In</div></Link>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm">
-                      <span className="sr-only">Open user menu</span>
-                      <div className="rounded-full bg-slate-200 text-black px-4 py-2 leading-4 text-sm">Sign-Up</div>
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            As Professional
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                          As Contractor
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                          Trainee
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+                
+                      <div className="rounded-full bg-slate-200 text-black px-4 py-2 leading-4 text-sm"><Link href={route('register')}>Sign-Up</Link></div>
+                  
               </div>
             </div>
           </div>
@@ -446,6 +620,5 @@ export default function Navigation({navigation}){
         </>
       )}
     </Disclosure>
-
            </>)
-}
+} 
