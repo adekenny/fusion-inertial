@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+
 import Checkbox from '@/Components/Checkbox';
 import VisitorsLayout from '@/Layouts/VisitorsLayout';
 import InputError from '@/Components/InputError';
@@ -42,7 +42,7 @@ const submit = (e) => {
     <VisitorsLayout>
     <Transition.Root show={open} as={Fragment}>
       
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+      <Dialog as="div" className="relative z-10" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

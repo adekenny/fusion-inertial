@@ -588,8 +588,8 @@ export default function Navigation({navigation}){
                 
               </div>
               
-              <div className="absolute inset-y-0 right-0 flex items-center pr-8 mr-8 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <Link href={route('login')}><div className="text-white text-sm">Sign-In</div></Link>
+              <div className="absolute inset-y-0 right-0 flex items-center mr-8 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <Link href={route('login')}><div className="text-white text-sm mr-6">Sign-In</div></Link>
 
                 {/* Profile dropdown */}
                 
